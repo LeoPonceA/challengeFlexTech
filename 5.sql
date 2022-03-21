@@ -13,8 +13,7 @@ insert into edad (id, name, age) values(5, "Sally", 19);
 insert into edad (id, name, age) values(6, "Jess", 20);
 insert into edad (id, name, age) values(7, "Will", 21);
 
---Dividimos el año por 100 y lo casteamos como float
---para que tome los decimales el CEIL
+--Hacemos el COUNT por edad
 select age, count(*)
 from edad
 GROUP by age;
