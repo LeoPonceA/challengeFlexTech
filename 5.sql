@@ -1,26 +1,23 @@
--- TABLE
-CREATE TABLE anios(
-ID int not null ,
-year int,
-primary key(ID));
-CREATE TABLE convers(
-ID int not null,
-valor int, 
-primary key(ID));
-CREATE TABLE conversion(
-ID int not null,
-valor int, 
-primary key(ID));
-CREATE TABLE demo (ID integer primary key, Name varchar(20), Hint text );
-CREATE TABLE edad(
+--Creamos la tabla con sus campos
+create table edad(
 ID int not null,
 name varchar(6),
 age int, 
 primary key(ID));
- 
--- INDEX
- 
--- TRIGGER
- 
--- VIEW
- 
+
+insert into edad (id, name, age) values(1, "bob", 21);
+insert into edad (id, name, age) values(2, "Sam", 19);
+insert into edad (id, name, age) values(3, "Jill", 18);
+insert into edad (id, name, age) values(4, "Jim", 21);
+insert into edad (id, name, age) values(5, "Sally", 19);
+insert into edad (id, name, age) values(6, "Jess", 20);
+insert into edad (id, name, age) values(7, "Will", 21);
+
+--Dividimos el año por 100 y lo casteamos como float
+--para que tome los decimales el CEIL
+select age, count(*)
+from edad
+GROUP by age;
+
+DROP table edad;
+
