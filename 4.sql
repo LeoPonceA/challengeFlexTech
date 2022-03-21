@@ -10,7 +10,7 @@ insert into par_impar (id, value) values(3, 57);
 insert into par_impar (id, value) values(4, 24);
 insert into par_impar (id, value) values(5, 47);
 
---Hacemos un count por age
+--Calculo el resto y si es 0, imprimo PAR, si no, IMPAR
 select case WHEN value % 2 = 0 then 'Par' ELSE 'Impar' end as resultado 
 from par_impar;
 
