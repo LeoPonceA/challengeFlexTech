@@ -12,4 +12,4 @@ BEGIN
     return @return_aux;
 end;
 
-select devolver_cantidad(21);
+exec devolver_cantidad(21);
