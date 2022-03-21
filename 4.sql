@@ -1,26 +1,17 @@
--- TABLE
-CREATE TABLE anios(
-ID int not null ,
-year int,
-primary key(ID));
-CREATE TABLE convers(
+--Creamos la tabla con sus campos
+create table par_impar(
 ID int not null,
-valor int, 
+value int, 
 primary key(ID));
-CREATE TABLE conversion(
-ID int not null,
-valor int, 
-primary key(ID));
-CREATE TABLE demo (ID integer primary key, Name varchar(20), Hint text );
-CREATE TABLE edad(
-ID int not null,
-name varchar(6),
-age int, 
-primary key(ID));
- 
--- INDEX
- 
--- TRIGGER
- 
--- VIEW
- 
+
+insert into par_impar (id, value) values(1, 4);
+insert into par_impar (id, value) values(2, 11);
+insert into par_impar (id, value) values(3, 57);
+insert into par_impar (id, value) values(4, 24);
+insert into par_impar (id, value) values(5, 47);
+
+--Hacemos un count por age
+select case WHEN value % 2 = 0 then 'Par' ELSE 'Impar' end as resultado 
+from par_impar;
+
+DROP table par_impar;
